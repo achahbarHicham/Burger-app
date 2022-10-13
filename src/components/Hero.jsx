@@ -1,4 +1,5 @@
-import React from 'react'
+import { Link } from "react-router-dom"
+
 
 import "../sass/Hero.scss"
 import Burger from '../images/burger-img.png'
@@ -23,7 +24,7 @@ const Hero = () => {
         <div className="hero__content">
             <h1>discover all recipes in the world</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-            <button className='btn btn-hero'>Recipes</button>
+            <Link to='/recipes'><button className='btn btn-hero'>Recipes</button></Link>
         </div>
     </main>
   )
