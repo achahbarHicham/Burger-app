@@ -1,0 +1,19 @@
+@import "./Vars.scss";
+.cuisine-container{
+    margin-top: 4rem;
+    display: grid;
+    row-gap: 2rem;
+    @include md(){
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 2rem;
+    }
+    @include xlg(){
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1rem;
+        row-gap: 2rem;
+    }
+}
+
+.cuisine-text-card{
+    font-size: 1.8rem;
+}

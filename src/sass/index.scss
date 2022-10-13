@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@import "./Vars.scss";
+
+
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+@include sm(){
+    html{
+        font-size: 70%;
+    }
+}
+
+body{
+    font-size: 1.6rem;
+    font-family:'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    ::selection{
+        background-color: $color-primary;
+        color: white;
+    }
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    @include sm(){
+        width: 80%;
+        max-width: 768px;
+    }
+    @include lg(){
+        max-width: 992px;
+    }
+    @include xlg(){
+        max-width: 1300px;
+    }
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+input,button{
+    outline: none;
+    border: none;
+    font-size: inherit;
+}
+
+@media only screen and (min-width: 600px) {
+    html {
+      zoom: .8;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    html {
+      zoom: .9;        
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    html {
+      zoom: 1;
+    }
+  }

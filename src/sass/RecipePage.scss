@@ -1,0 +1,12 @@
+@import "./Vars.scss";
+
+.recipe-container{
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+    @include lg(){
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+    }
+    
+}

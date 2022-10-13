@@ -1,0 +1,105 @@
+@import "./Vars.scss";
+
+
+.footer{
+    background-color: $color-primary;
+    margin-top: 10rem;
+    padding: 5rem 0;
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 2rem;
+        @include lg(){
+            grid-template-columns: repeat(3,1fr);
+        }
+        .footer-logo{
+            grid-column: 1 / -1;
+
+            img{
+                width: 5rem;
+            }
+        }
+
+       .footer-search{
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        margin-bottom: 3rem;
+        &.hide{
+            display: none;
+        }
+        &.show{
+            display: block;
+        }
+        @include lg(){
+            grid-column: 3 / 4;
+        }
+        label{
+            display: block;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+        div{
+            display: flex;
+            width: 100%;
+            height: 4rem;
+            
+            @include lg(){
+                flex-wrap: wrap;
+            }
+            
+            input{
+                width: 70%;
+                color:black;
+                font-size: inherit;
+                @include lg(){
+                    width: 100%;
+                }
+            }
+            button{
+                width: 40%;
+                background-color: transparent;
+                color: white;
+                margin-left: 1rem;
+                @include lg(){
+                    width: unset;
+                    margin-left: 0;
+                }
+                &:hover{
+                    background-color: $light-grey;
+                    color: black;
+                }
+            }
+            input,button{
+                height: 100%;
+                padding: 1rem;
+                border: none;
+                outline: none;
+                border: 1px solid white;
+            }
+        }
+
+
+       }
+       h4{
+        margin-bottom: 2rem;
+        color: $color-white;
+       }
+       p{
+        color: white;
+       }
+       
+
+       .footer-pages{
+            a{
+                color: white;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+       }
+
+
+
+    }
+}

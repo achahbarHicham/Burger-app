@@ -1,0 +1,21 @@
+@import "./Vars.scss";
+.diet-section{
+    padding: 10rem 0;
+    background-color: $light-grey;
+    text-align: center;
+    h2{
+       text-align: center;
+       margin-bottom: 4rem;
+    }
+    &__cards{
+        display: grid;
+        @include md(){
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 2rem;
+        }
+        @include lg(){
+            grid-template-columns: repeat(3,1fr);
+        column-gap: 2rem;
+        }
+    }
+}

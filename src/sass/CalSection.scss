@@ -1,0 +1,10 @@
+@import "./Vars.scss";
+
+.calories-section{
+    padding: 10rem 0;
+    background-color: $light-grey;
+    h2{
+        margin-bottom:5rem;
+        text-align: center;
+    }
+}

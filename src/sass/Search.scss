@@ -1,0 +1,70 @@
+@import "./Vars.scss";
+
+.search-page{
+    padding: 5rem 0;
+    form{
+        margin: 4rem 0;
+        label{
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+        @include md(){
+            width: 70%;
+            margin: 4rem auto;
+        }
+        @include lg(){
+            width: 50%;
+        }
+    
+        div{
+            display: flex;
+            align-items: center;
+            margin-top: 2rem;
+            input{
+                width: 70%;
+                background-color: $light-grey;
+                border: 1px solid $light-grey;
+                @include lg(){
+                    width: 75%;
+                }
+            }
+            button{
+                width: 32%;
+                border: 1px solid $color-primary;
+                background-color: transparent;
+                color: $color-primary;
+                border-radius: 5px;
+                transition: all .3s ease;
+                @include sm(){
+                    width: 28%;
+                }
+                @include lg(){
+                    width: 25%;
+                    margin-left: 1rem;
+                }
+                &:hover{
+                    background-color: $color-primary;
+                    color: white;
+                    
+                }
+            }
+            input,button{
+                padding: 1rem 2rem;
+                font-size: inherit;
+                
+            }
+        }
+    }
+
+    .search-container{
+        margin-top: 4rem;
+        display: grid;
+        row-gap: 2rem;
+        @include md(){
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 2rem;
+        }
+    }   
+
+}
+

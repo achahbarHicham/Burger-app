@@ -1,0 +1,33 @@
+@import "./Vars.scss";
+
+
+.cal-card{
+    height: 50rem;
+    min-height: 50rem;
+    width: 100%;
+    background-color: white;
+    &__img{
+        height: 72%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+
+    }
+    &__content{
+        h4{
+            margin-bottom: 1rem;
+            &:hover{
+                cursor: pointer;
+                color: $color-primary;
+            }
+        }
+        padding: 2rem;
+        text-align: center;
+        @include center-elements();
+        flex-direction: column;
+
+    }
+}
+

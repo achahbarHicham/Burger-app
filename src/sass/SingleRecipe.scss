@@ -1,0 +1,63 @@
+@import "./Vars.scss";
+
+.single-title-text{
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        height: .5rem;
+        width: 2rem;
+        border-radius: 100px;
+        background-color: $color-primary;
+        left: 0;
+        top: -1rem;
+    }
+}
+.instruction-text{
+    li{
+        margin-bottom: 3rem;
+    }
+}
+.summary-text{
+    a{
+        color: black;
+        text-decoration: underline;
+    }
+}
+.similar-recipe{
+    margin-top: 4rem;
+}
+
+.btn-container{
+    padding: 5rem 0;
+    @include center-elements();
+}
+
+.btn-single{
+    background-color: $color-primary;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    color: white;
+    transition: all .3s ease;
+    border-radius: 5px;
+    margin-top: 2rem;
+    @include sm(){
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+    @include lg(){
+        
+    }
+
+    &:hover{
+        background-color: $color-primary-hover;
+    }
+    svg{
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,17 @@
+@import "./Vars.scss";
+
+.not-found{
+    @include center-elements();
+    height: 90vh;
+    &__card{
+        width: 30rem;
+        text-align: center;
+        svg{
+            font-size: 10rem;
+            color: $color-primary;
+        }
+        h1{
+            font-size: 8rem;
+        }
+    }
+}

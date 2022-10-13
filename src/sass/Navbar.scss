@@ -1,0 +1,175 @@
+@import "./Vars.scss";
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    padding: 1rem 0;
+    // position: sticky;
+    // top: 0;
+    &__logo{
+        height: 100%;
+        img{
+            max-width: 5rem;
+        }
+    }
+    &__nav{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 70%;
+        background-color: $color-primary;
+        z-index: 9999;
+        height: 100%;
+        transform: translateX(100%);
+        transition: all .5s ease-in-out;
+        padding-top: 40%;
+        padding-bottom: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        @include md(){
+            position: static;
+            transform:translateX(0) !important;
+            transition: unset;
+            flex-direction: row;
+            height: 100%;
+            padding-top: unset;
+            padding-bottom: unset;
+            background-color: unset;
+        }
+
+
+
+        &.show{
+            transform: translateX(0%)   
+        }
+        &.hide{
+            transform: translateX(100%);
+            @include md(){
+                transform: unset;
+            }
+        }
+
+
+    }
+
+    .nav{
+        @include xlg(){
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            // display: flex;
+            // justify-content: space-between;
+        }
+        &__list{
+            width: 100%; 
+            @include md(){
+                display: flex;
+                justify-content: flex-end;
+            }
+            @include xlg(){
+                justify-content: flex-start;
+                padding-left: 4rem;
+                &.flex-end{
+                    justify-content: flex-end;
+                }
+                &.flex-start{
+                    justify-content: flex-start;
+                }
+            }
+        }
+        &__link{
+            padding: 2rem;
+            width:100%;
+            display: block;
+            color: white;
+            &.active{
+                background-color: $color-primary-hover;
+                @include md(){
+                    background-color: unset;
+                color: $color-primary;
+                text-shadow: 0 0 .01px $color-primary, 0 0 .01px $color-primary;
+                }
+            }
+            @include md(){
+                display: inline-block;
+                &:hover{
+                    color: $color-primary;
+                    text-shadow: 0 0 .01px $color-primary, 0 0 .01px $color-primary;
+                    background-color: transparent !important;
+                }
+                color: black;
+            }
+            &:hover{
+                background-color: $color-primary-hover;
+            }
+        }
+        .header-form{
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            &.show{
+                display: flex;
+            }
+            &.hide{
+                display: none;
+            }
+            @include md(){
+                display: none;
+            }
+            @include xlg(){
+                display: flex;
+                justify-content: flex-end;
+                padding: 0;
+                input{
+                    background-color: $light-grey;
+                }
+                button{
+                    background-color: $color-primary;
+                    color: white;
+                    font-weight: bold;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    &:hover{
+                        background-color: $color-primary-hover;
+                    }
+                }
+            }
+            input{
+                width: 80%;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            input,button{
+                padding: 1rem;
+                
+        }
+        button{
+            @include center-elements();
+        }
+        }
+    }
+
+    .menu-icon{
+        @include center-elements();
+        position: relative;
+        z-index: 9999;
+        cursor: pointer;
+        @include md(){
+            display: none;
+        }
+        svg{
+            font-size: 4rem;
+            pointer-events: none;
+        }
+        .color-white{
+            color: white;
+        }
+        .color-black{
+            color: black;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+// declare variables
+$color-black:#000;
+$color-white:#fff;
+$color-primary:#F42D2D;
+$light-grey:#F8F8F8;
+$dark-grey:#F6F6F6;
+$color-primary-hover:#e10303;
+$text-secondary:#262626;
+// cneter elements 
+@mixin center-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin sm {
+    @media screen and (min-width:576px) {
+        @content;
+    }
+}
+@mixin md {
+    @media screen and (min-width:768px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media screen and (min-width:992px) {
+        @content;
+    }
+}
+@mixin xlg {
+    @media screen and (min-width:1200px) {
+        @content;
+    }
+}

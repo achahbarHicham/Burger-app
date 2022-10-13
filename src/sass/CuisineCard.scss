@@ -1,0 +1,27 @@
+@import "./Vars.scss";
+.card{
+    width: 100%;
+    height: 15rem;
+    border-radius: 1rem;
+    background-color: $light-grey;
+    
+    @include center-elements();
+    flex-direction: column;
+    @include md(){
+        height: 25rem;
+    }
+    &:hover{
+        background-color: $color-primary;
+        color: $color-white;
+        transition: all .3s ease;
+    }
+    &__img{
+        svg{
+            font-size: 3rem;
+            @include md(){
+                font-size: 5rem;
+            }
+        }
+        margin-bottom: 2rem;
+    }
+}
